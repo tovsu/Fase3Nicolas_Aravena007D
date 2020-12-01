@@ -1,15 +1,47 @@
 {% exend 'base.html' %}
-
-
 {% clock content %}
-<h1> Local Comic Home </h1>
 
-<p> Bienvenido a <em>Local Comic</em> </p>
+<form method="post" class="formulario rounded px-5">
+    <div class="text-center">
+         <p 
+            class="text-light">
+            Formulario de registro Usuario
+         </p>
+    </div>
+    {% csrf_token %}
+    <div class="formulario-label">
+        <input 
+               type="text" 
+               name="usuario1" 
+               maxlength="20" 
+               autocapitalize="none" 
+               autocomplete="usuario1" 
+               autofocus="" 
+               required="" 
+               id="id_usuario">
+        <label 
+            for="usuario">    
+         </label>       
+    </div>
 
-   <h2>login</h2>
-   <form method="pos">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">login</button>
-    </form>
+    <div class="formulario-label">
+         <input 
+               type="password" 
+               name="contra" 
+               autocomplete="new-password" 
+               required="" 
+               id="codigo_contra">
+         <label 
+            for="pass">
+            ingrse una contraseña
+         </label>  
+    </div>
+   
+    <button 
+         type="submit" 
+         class="btn btn-dark">
+         Loguerse
+   </button>
+    
+</form>
 {% endblock %}

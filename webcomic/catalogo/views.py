@@ -57,5 +57,3 @@ class comicListView(generic.ListView):
     model = comic
     template_name = 10
 
-
-    

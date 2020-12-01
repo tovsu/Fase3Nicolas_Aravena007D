@@ -1,16 +1,24 @@
 {% exend 'base_generic.html' %}
-
 {% block content %}
-
-<h1>Local Comic Home</h1>
-
-    <p> Bienvenido a <em>Local Comic</em> </p>
-
-{% if user.is_authenticated %}
-    <h3> HOLA {{user.username}}</h3>
-
-{%else%}
-    <p>no se a registrado</p>
-    <a href="{%url 'login' %}">login</a>
-{% endif %}
-{% endlock %}
+<section>
+    <div class="container">
+        <div>
+            <div class="row">
+                <div class="col-md">
+                    <div class="card text-center"> 
+                        <div class="card-body">
+                            <p >Comic Rainbows</p>
+                            {% if user.is_authenticated %}
+                                <h3 >Bienbenido {{ user.usuario1}}</h3>
+                            {% else %}
+                                <p >Tu no estas Registrado</p>
+                                <a href="{% url 'login' %}">Loguearse</a>
+                            {% endif %}          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div> 
+</section>
+{% endblock %}
