@@ -1,0 +1,15 @@
+{% exend 'base.html' %}
+
+
+{% clock content %}
+<h1> Local Comic Home </h1>
+
+<p> Bienvenido a <em>Local Comic</em> </p>
+
+   <h2>login</h2>
+   <form method="pos">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">login</button>
+    </form>
+{% endblock %}

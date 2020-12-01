@@ -1,0 +1,119 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% block title %}<title>Rainbow Comics</title>{% endblock %}
+        <meta charset = "utf-8">
+        {% load static %}
+        <meta name    = "viewport" content="width=device-width, initial-scale=1">
+        <link   rel   =  "stylesheet" href="{% static 'css/styles.css' %}">
+        <link   href  =  "css/menubootstrap.min.css" type="text/css" real="stylesheet">
+        <link   rel   = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src   = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src   = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+            body {
+              font-family: Arial;
+            }
+        
+            input {
+              float: left;
+              width: 200px;
+              margin-bottom: 10px;
+            }
+        
+            label {
+              clear: both;
+              float: left;
+              width: 180px;
+            }
+        
+            button {
+              clear: both;
+              float: left;
+              width: 50px;
+            }
+        
+            .error-control {
+              border: 1px solid red;
+            }
+        
+            label.error {
+              color: red;
+              width: 300px;
+              font-size: 0.8em;
+              margin-top: -5px;
+              margin-bottom: 10px;
+            }
+        
+          </style>
+    </head>
+<body>
+    <main>
+        <!--CORRIDA CARTA 1-->
+        <div class="container">   
+            <h3>Comic Top 3</h3>
+            <div class="row"> 
+                
+                <!--Card 1-->
+                <div class="col-md">        
+                    <div class="card text-center">
+                      <img class="card-img-top" src="{% static 'imagenes/com/batfla.gif'%}">
+                      <div class="card-body">
+                        <h5 class="card-title">BATMAN #21</h5>
+                        <p class="card-text"> $19.000</p>
+                        <a href="{%url 'compra.html'%}"class="btn btn-dark">comprar</a>
+                      </div>
+                    </div>          
+                </div>
+
+                <!--Card 2-->
+                <div class="col-md">        
+                    <div class="card text-center">
+                        <img class="card-img-top" src="{% static 'imagenes/com/devil.gif'%}">
+                        <div class="card-body">
+                            <h5 class="card-title">DareDevil #27</h5>
+                            <p class="card-text">$18.000</p>
+                            <a href="{%url 'compra.html'%}" class="btn btn-dark">comprar</a>
+                        </div>
+                    </div>          
+                </div>
+
+                <!--Card 3-->
+                <div class="col-md">        
+                    <div class="card text-center">
+                        <img class="card-img-top" src="{% static 'imagenes/com/lanter.gif'%}">
+                        <div class="card-body">
+                            <h5 class="card-title">Green Lanters #01</h5>
+                            <p class="card-text">$22.000</p>
+                            <a href="{%url 'compra.html'%}"class="btn btn-dark">comprar</a>
+                        </div>
+                    </div>          
+                </div>
+
+                <!--Card 4-->
+                <div class="col-md">        
+                    <div class="card text-center">
+                        <img class="card-img-top" src="img/xmen/x4.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">FENIX #01</h5>
+                            <p class="card-text">$14.500</p>
+                            <a href="{%url 'compra.html'%}" class="btn btn-dark">comprar</a>
+                        </div>
+                    </div>          
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+</body>    
+
+</html>

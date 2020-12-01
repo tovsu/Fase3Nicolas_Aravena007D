@@ -1,0 +1,16 @@
+{% exend 'base_generic.html' %}
+
+{% block content %}
+
+<h1>Local Comic Home</h1>
+
+    <p> Bienvenido a <em>Local Comic</em> </p>
+
+{% if user.is_authenticated %}
+    <h3> HOLA {{user.username}}</h3>
+
+{%else%}
+    <p>no se a registrado</p>
+    <a href="{%url 'login' %}">login</a>
+{% endif %}
+{% endlock %}
